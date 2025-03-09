@@ -1,0 +1,20 @@
+Test 1:
+Hi World! Hi Universe!
+
+Test 2:
+abcabcabc abcabcabc abcabcabc
+
+Test 3:
+x x x
+
+Test 4:
+No matches here
+
+Test 5:
+Checking without newline
+
+Test 6: Non-existent file
+Error: could not open file
+
+Test 7: Empty string replacement
+Error: s1 cannot be empty
