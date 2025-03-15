@@ -9,12 +9,14 @@ class Fixed
 	public:
 		Fixed();
 		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &operator);
+		Fixed &operator = (const Fixed &fixed_operator);
 		~Fixed();
-	private:
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-};
 
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
+	private:
+		int					value;
+		static const int	fractional_bits = 8;
+};
 
 #endif
