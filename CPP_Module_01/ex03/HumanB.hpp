@@ -6,7 +6,7 @@
 /*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:46:45 by mwojtcza          #+#    #+#             */
-/*   Updated: 2025/03/13 14:46:46 by mwojtcza         ###   ########.fr       */
+/*   Updated: 2025/03/13 15:45:54 by mwojtcza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanB
 {
 	private:
 		std::string name;
-		Weapon *weapon = NULL;
+		Weapon *weapon;
 	public:
 		HumanB(std::string name);
 		~HumanB();

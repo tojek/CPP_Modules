@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/19 14:06:11 by mwojtcza          #+#    #+#             */
+/*   Updated: 2025/03/19 14:06:54 by mwojtcza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -27,9 +39,9 @@ class Fixed
 		friend Fixed			operator * (const Fixed &a, const Fixed &b);
 		friend Fixed			operator / (const Fixed &a, const Fixed &b);
 
-		Fixed&					operator ++ (void);
+		Fixed&				operator ++ (void);
 		Fixed					operator ++ (int);
-		Fixed&					operator -- (void);
+		Fixed&				operator -- (void);
 		Fixed					operator -- (int);
 
 		static Fixed&			min(Fixed &a, Fixed &b);
@@ -38,8 +50,8 @@ class Fixed
 		static const Fixed&		max(const Fixed &a, const Fixed &b);
 
 		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-		float	toFloat( void ) const;
+		void		setRawBits( int const raw );
+		float		toFloat( void ) const;
 		int		toInt( void ) const;
 	private:
 		int					value;

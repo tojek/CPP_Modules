@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/19 14:06:03 by mwojtcza          #+#    #+#             */
+/*   Updated: 2025/03/19 14:07:06 by mwojtcza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -17,8 +29,8 @@ class Fixed
 		friend std::ostream &operator << (std::ostream &out, const Fixed &fixed);
 
 		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-		float	toFloat( void ) const;
+		void		setRawBits( int const raw );
+		float		toFloat( void ) const;
 		int		toInt( void ) const;
 	private:
 		int					value;
