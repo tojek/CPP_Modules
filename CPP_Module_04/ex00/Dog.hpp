@@ -18,4 +18,4 @@ class Dog : public Animal
         void        setType(std::string type);
 
         void makeSound() const;
-}
+};
