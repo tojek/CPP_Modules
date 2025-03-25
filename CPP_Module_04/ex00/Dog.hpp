@@ -8,14 +8,10 @@ class Dog : public Animal
         std::string type;
     public:
         Dog();
-        Dog(std::string type);
         Dog(Dog const &copy);
         virtual ~Dog();
 
         Dog &operator=(Dog const &other);
-
-        std::string getType() const;
-        void        setType(std::string type);
 
         void makeSound() const;
 };

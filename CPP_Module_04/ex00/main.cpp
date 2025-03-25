@@ -13,12 +13,19 @@ int main()
 	const WrongAnimal *i2 = new WrongCat();
 
 	std::cout << std::endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
 
 	i->makeSound();
 	j->makeSound();
 	meta->makeSound();
+
+	std::cout << std::endl;
+
 	i2->makeSound();
 	meta2->makeSound();
+
+	std::cout << std::endl;
 
 	delete meta;
 	delete j;

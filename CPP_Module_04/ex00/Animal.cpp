@@ -1,11 +1,11 @@
 #include "Animal.hpp"
 
-Animal::Animal () : type("Unknown") 
+Animal::Animal () : type("Unknown")
 {
     std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal (std::string type) : type(type) 
+Animal::Animal (std::string type) : type(type)
 {
     std::cout << "Animal " << this->type << " was born" << std::endl;
 }
@@ -16,7 +16,7 @@ Animal::Animal (Animal const &copy)
     std::cout << "Animal " << this->type << " was copied" << std::endl;
 }
 
-Animal::~Animal () 
+Animal::~Animal ()
 {
     std::cout << "Animal " << this->type << " was destroyed" << std::endl;
 }
