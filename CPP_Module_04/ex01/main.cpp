@@ -9,7 +9,7 @@
 int main()
 {
     std::cout << "=== Basic Array Tests ===" << std::endl;
-    int arraySize = 4;
+    int arraySize = 8;
     Animal* animals[arraySize];
 
     // Fill array with half dogs and half cats
@@ -45,6 +45,7 @@ int main()
     std::cout << "Copied dog (assignment) idea: " << dog3.getBrain()->getIdea(0) << std::endl;
 
     // Change original dog's idea to verify deep copy
+	std::cout << std::endl;
     dog1->getBrain()->setIdea(0, "I love sleeping!");
     std::cout << "\nAfter changing original dog's idea:" << std::endl;
     std::cout << "Original dog idea: " << dog1->getBrain()->getIdea(0) << std::endl;

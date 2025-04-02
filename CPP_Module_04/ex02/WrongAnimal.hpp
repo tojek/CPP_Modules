@@ -21,6 +21,6 @@ class WrongAnimal
         void        setType(std::string type);
 
         // member functions
-        void makeSound() const;
+        virtual void makeSound() const;
 
 };
