@@ -20,10 +20,9 @@ WrongCat::~WrongCat()
 
 WrongCat &WrongCat::operator=(WrongCat const &other)
 {
-    std::cout << "WrongCat assignment operator called" << std::endl;
-    if (this != &other)
-		this->type = other.type;
-    return (*this);
+	std::cout << "WrongCat " << this->type << " was assigned to " << other.getType() << std::endl;
+	this->setType(other.getType());
+	return (*this);
 }
 
 std::string WrongCat::getType() const

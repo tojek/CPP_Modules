@@ -3,31 +3,49 @@
 Dog::Dog() : Animal()
 {
     this->type = "Dog";
+	this->brain = new Brain();
+	if (this->brain == NULL)
+	{
+		std::cout << "Dog brain was not created" << std::endl;
+		return ;
+	}
     std::cout << "Dog default constructor called" << std::endl;
 }
 
 Dog::Dog(Dog const &copy) : Animal(copy)
 {
-    *this = copy;
+    this->type = copy.type;
+    this->brain = new Brain(*copy.brain);
     std::cout << "Dog " << this->type << " was copied" << std::endl;
 }
 
 Dog::~Dog()
 {
     std::cout << "Dog " << this->type << " was destroyed" << std::endl;
+	delete this->brain;
 }
 
 Dog &Dog::operator=(Dog const &other)
 {
-    std::cout << "Dog assignment operator called" << std::endl;
-    if (this != &other)
+    std::cout << "Dog " << this->type << " was assigned to " << other.type << std::endl;
+	if (this != &other)
+	{
 		this->type = other.type;
-    return (*this);
+		if (this->brain != NULL)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
+	}
+	return (*this);
 }
 
 std::string Dog::getType() const
 {
 	return (this->type);
+}
+
+Brain *Dog::getBrain() const
+{
+	return (this->brain);
 }
 
 void Dog::makeSound() const

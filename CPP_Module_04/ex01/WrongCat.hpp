@@ -4,7 +4,8 @@
 
 class WrongCat : public WrongAnimal
 {
-
+    private:
+        std::string type;
     public:
         WrongCat();
         WrongCat(WrongCat const &copy);

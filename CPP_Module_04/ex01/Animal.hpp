@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {
@@ -16,10 +17,11 @@ class Animal
         Animal &operator=(Animal const &other);
 
         // getters && setters
-        virtual 	std::string getType() const;
+        std::string getType() const;
         void        setType(std::string type);
 
         // member functions
         virtual void makeSound() const;
+		virtual Brain *getBrain() const = 0;
 
 };
