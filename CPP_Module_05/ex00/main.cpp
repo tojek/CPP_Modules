@@ -16,5 +16,13 @@ int main ()
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
 
+	Bureaucrat b3("Jack", 42);
+
+	b3.incrementGrade();
+	std::cout << b3 << std::endl;
+	b3.decrementGrade();
+	std::cout << b3 << std::endl;
+
+
 	return 0;
 }
