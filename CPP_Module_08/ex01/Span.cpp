@@ -64,8 +64,6 @@ int Span::longestSpan() const
 	return maxNumber - minNumber;
 }
 
-// Template implementation moved to header file
-
 unsigned int Span::size() const
 {
 	return _numbers.size();
