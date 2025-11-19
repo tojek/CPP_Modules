@@ -2,7 +2,7 @@
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Whatever
+NAME = MutantStack
 
 FILES = main.cpp
 OBJS = $(FILES:.cpp=.o)

@@ -4,7 +4,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Span
 
-FILES = main.cpp
+FILES = main.cpp Span.cpp
 OBJS = $(FILES:.cpp=.o)
 
 all: $(NAME)

@@ -1,6 +1,8 @@
 #include "Span.hpp"
+#include <algorithm>
+#include <stdexcept>
 
-Span::Span(unsigned int n) : _maxSize(n)
+Span::Span(unsigned int N) : _maxSize(N)
 {
 }
 
@@ -34,9 +36,7 @@ void Span::addNumber(int number)
 int Span::shortestSpan() const
 {
 	if (_numbers.size() < 2)
-	{
 		throw std::runtime_error("Not enough numbers to find a span");
-	}
 
 	std::vector<int> sortedNumbers = _numbers;
 	std::sort(sortedNumbers.begin(), sortedNumbers.end());
@@ -56,9 +56,7 @@ int Span::shortestSpan() const
 int Span::longestSpan() const
 {
 	if (_numbers.size() < 2)
-	{
 		throw std::runtime_error("Not enough numbers to find a span");
-	}
 
 	int minNumber = *std::min_element(_numbers.begin(), _numbers.end());
 	int maxNumber = *std::max_element(_numbers.begin(), _numbers.end());
@@ -66,3 +64,24 @@ int Span::longestSpan() const
 	return maxNumber - minNumber;
 }
 
+// Template implementation moved to header file
+
+unsigned int Span::size() const
+{
+	return _numbers.size();
+}
+
+unsigned int Span::maxSize() const
+{
+	return _maxSize;
+}
+
+void Span::addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	size_t distanceSize = std::distance(begin, end);
+	if (_numbers.size() + distanceSize > _maxSize)
+	{
+			throw std::runtime_error("Adding these numbers would exceed Span capacity");
+	}
+	_numbers.insert(_numbers.end(), begin, end);
+}
