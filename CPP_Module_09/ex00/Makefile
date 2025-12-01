@@ -2,9 +2,9 @@
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Easyfind
+NAME = btc
 
-FILES = main.cpp
+FILES = main.cpp BitcoinExchange.cpp
 OBJS = $(FILES:.cpp=.o)
 
 all: $(NAME)
