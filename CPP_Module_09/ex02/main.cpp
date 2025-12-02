@@ -6,7 +6,7 @@
 /*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:54:00 by mwojtcza          #+#    #+#             */
-/*   Updated: 2025/12/02 13:54:01 by mwojtcza         ###   ########.fr       */
+/*   Updated: 2025/12/02 14:00:57 by mwojtcza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int main(int argc, char** argv) {
     if (argc < 2) {
-        std::cerr << "Error" << std::endl;
+        std::cerr << "Error: wrong number of arguments" << std::endl;
+        std::cerr << "Usage: ./PmergeMe numbers to sort" << std::endl;
         return 1;
     }
 
