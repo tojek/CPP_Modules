@@ -6,12 +6,11 @@
 /*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 13:54:08 by mwojtcza          #+#    #+#             */
-/*   Updated: 2025/12/02 13:54:09 by mwojtcza         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:56:11 by mwojtcza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PMERGEME_HPP
-#define PMERGEME_HPP
+#pragma once
 
 #include <vector>
 #include <deque>
@@ -40,5 +39,3 @@ private:
     static void mergeVector(std::vector<int>& arr, int left, int mid, int right);
     static void mergeDeque(std::deque<int>& arr, int left, int mid, int right);
 };
-
-#endif
