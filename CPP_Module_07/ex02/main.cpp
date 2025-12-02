@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwojtcza <mwojtcza@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/05 19:25:39 by mwojtcza          #+#    #+#             */
+/*   Updated: 2025/11/05 19:32:41 by mwojtcza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Array.hpp"
 #include <iostream>
 #include <string>
@@ -78,10 +90,6 @@ int main()
             std::cout << assignedArray[i] << " ";
         }
         std::cout << std::endl;
-
-        // Test self-assignment
-        assignedArray = assignedArray;
-        std::cout << "After self-assignment, size: " << assignedArray.size() << std::endl;
 
         // Test 5: Different types
         std::cout << "\n5. Testing with different types:" << std::endl;
